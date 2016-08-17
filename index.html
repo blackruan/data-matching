@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Project CS784</title>
+  <meta http-equiv="Content-Type" content="charset=utf-8">
+  <style type='text/css'>
+   .button1 { font-weight: bold; font-size: 95%; text-transform: uppercase;
+              background-color: #bdbdbd; cursor: pointer; cursor: hand;
+              width: 125px; height: 35px; border-radius: 4px; border: 1px; }
+   .button2 { font-weight: bold; font-size: 100%;
+              background-color: #a4a4a4; cursor: pointer; cursor: hand;
+              width: 200px; height: 35px; border-radius: 4px; border: 1px; }
+   .button3 { font-weight: bold; font-size: 100%;
+              background-color: #a4a4a4; cursor: pointer; cursor: hand;
+              width: 225px; height: 35px; border-radius: 4px; border: 1px; }
+   .button4 { font-weight: bold; font-size: 100%;
+              background-color: #a4a4a4; cursor: pointer; cursor: hand;
+              width: 250px; height: 40px; border-radius: 4px; border: 1px; }
+   .button1:hover { background: #0099ff; }
+   .button2:hover { background: #0099ff; }
+   .button3:hover { background: #0099ff; }
+   .button4:hover { background: #0099ff; }
+   .tdlist1 { background: #424242; width: 225px; line-height: 150%;
+              font-style: italic; font-weight: bold; }
+   .tdlist2 { background: #424242; width: 200px; line-height: 150%;
+              font-style: italic; font-weight: bold; }
+   a:link { color: #ffffff; }
+   a:visited { color: #ffffff; }
+   a:hover { color: #0099ff; }
+   a:active { color: #ffffff; }
+  </style>
+ </head>
+
+ <body bgcolor="#151515" width= 70%>
+ <font color="#d8d8d8" face="Helvetica">
+
+<!-- header -->
+  <h1> Project: <i>Data Integration </i></h1>
+  <h2>
+   <p> Topic: <i>Restaurants </i></p>
+  </h2>
+  <p> Team:<b> <i> Clarence Cheung, Jin Ruan </i> </b>
+  </p>
+ </font> 
+ <br>
+
+<!-- description -->
+ <font color="#d8d8d8" face="Georgia">
+ <h2> Description:</h2>
+ <p style="line-height: 150%">
+  Restaurant data of ten most populated US cities is extracted from
+  <b>
+   <a href="http://www.yelp.com" target="_blank">
+    <span title="www.yelp.com">Yelp</span></a> 
+   </b> and 
+   <b>
+    <a href= "http://www.yellowpages.com" target="_blank">
+     <span title="www.yellowpages.com">Yellow Pages</span></a>.
+   </b>
+   <br>
+  Two csv files (tables) are generated for further processing in the next stage.
+   <br>
+   Using the csv files, a candidate set is obtained by blocking.
+  </p> 
+  <br>
+
+<!-- part 2 -->
+  <!-- csv files and webpages -->
+  <h1> part 2: sources</h1>
+  <p> 
+  <table>
+   <tr>
+    <td>
+     <h3> Yelp: </h3>
+    <td>
+     <form action="tableA.csv" method="get">
+      <input class="button2" type="submit" formtarget="_blank" value="tableA.csv"/>
+     </form>
+    <td>
+    <td>
+     <img src= "yelp.png" style="width: 50px;height: 50px;">
+    <td>
+     <form action="yelp_pages" method="get">
+      <input class="button1" type="submit" formtarget="_blank" value="HTML"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <h3> Yellow <br>Pages: </h3>
+    <td>
+     <form action="tableB.csv" method="get">
+      <input class="button2" type="submit" formtarget="_blank" value="tableB.csv"/>
+     </form>
+    <td>
+    <td>
+     <img src="yp.png" style="width: 50px;height: 50px;">
+    <td>
+     <form action="yp_pages" method="get">
+      <input class="button1" type="submit" formtarget="_blank" value="HTML"/>
+     </form>
+   </tr>
+  </table>
+  <br>
+
+<!-- part 3 -->
+  <h1>
+   <b>part 3: Blocking</b>
+  </h1>
+
+  <p>
+   <h3>
+   <a href="blocking_explanation.pdf" target="_blank">Blocking explanation</a>
+   can be found 
+   <a href="blocking_explanation.pdf" target="_blank">here</a>.
+   </h3>
+  </p>
+  <table>
+   <tr>
+    <td>
+     <h3> Candidate set: </h3>
+    <td>
+     <form action="tableC.csv" method="get">
+      <input class="button3" type="submit" formtarget="_blank" value="tableC.csv"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <h3> ipython code: </h3>
+    <td>
+     <form action="blocking.ipynb" method="get">
+      <input class="button3" type="submit" formtarget="_blank" value="blocking.ipynb"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <h3> Misc: </h3>
+    <td>
+     <form action="table_A.csv" method="get">
+      <input class="button3" type="submit" formtarget="_blank" value="Table A (revised)"/>
+     </form>
+    <td>
+     <form action="table_B.csv" method="get">
+      <input class="button3" type="submit" formtarget="_blank" value="Table B (revised)"/>
+     </form>
+   </tr>
+  </table>
+  <br>
+
+<!-- part 4 -->
+  <h1>
+   <b>part 4: Matching</b>
+  </h1>
+
+  <p>
+   <h3>
+   The 
+   <a href="matching.pdf" target="_blank">Matching explanation</a>
+   is available
+   <a href="matching.pdf" target="_blank">here</a>.
+  </h3>
+  </p>
+
+  <table>
+   <tr>
+    <td>
+     <h3> Golden Set G: </h3>
+    <td>
+     <form action="OutputG1.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table G (no fixes)"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <h3> ipython code: </h3>
+    <td>
+     <form action="matching.ipynb" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="matching.ipynb"/>
+     </form>
+    <td>
+     <form action="block_and_sample.ipynb" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="block & sample"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <h3> Misc: </h3>
+    <td>
+     <form action="G_revised.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table G (relabel)"/>
+     </form>
+    <td>
+     <form action="table_C.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table C (enhanced)"/>
+     </form>
+   </tr>
+  </table>
+  <br>
+
+  <h1>
+   <b>part 4.5: Final File Submission</b>
+  </h1>
+ 
+  <table>
+   <tr>
+    <td>
+     <h3> blocking: </h3>
+    <td>
+   </tr>
+   <tr>
+    <td>
+     <form action="tableA.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table A (original)"/>
+     </form>
+    <td>
+     <form action="tableB.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table B (original)"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <form action="table_A.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table A (revised)"/>
+     </form>
+    <td>
+     <form action="table_B.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table B (revised)"/>
+     </form>
+   </tr>
+  </table> 
+  
+  <table>
+   <tr>
+    <td>
+     <h3> matching: </h3>
+    <td>
+   </tr>
+   <tr>
+    <td>
+     <form action="tableC.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table C (original)"/>
+     </form>
+    <td>
+     <form action="table_C.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table C (enhanced)"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <form action="OutputG1.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table G (original)"/>
+     </form>
+    <td>
+     <form action="G_revised.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Table G (relabel)"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <form action="I.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Development Set I&#10;(no correction)"/>
+     </form>
+    <td>
+     <form action="J.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Evaluation Set J&#10;(no correction)"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <form action="I_relabel.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Development Set I&#10;(relabel)"/>
+     </form>
+    <td>
+     <form action="J_relabel.csv" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="Evaluation Set J&#10;(relabel)"/>
+     </form>
+   </tr>
+  </table>
+
+  <hr>
+
+  <h1>
+   <b> part 5: Bonus</b> 
+  </h1>
+  <h2>
+   <b>Magellan User Report/Survey</b>
+  </h2>
+  <table>
+   <tr>
+    <td>
+     <h3> User Report: </h3>
+    <td>
+     <form action="Magellan_User_Report.pdf" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="User Report"/>
+     </form>
+   </tr>
+   <tr>
+    <td>
+     <h3> User Survey: </h3>
+    <td>
+     <form action="Magellan_User_Experience_Survey.pdf" method="get">
+      <input class="button4" type="submit" formtarget="_blank" value="User Experience Survey"/>
+     </form>
+   </tr>
+  </table>
+  <hr>
+
+  <h2>
+   <b>Acknowledgement</b>
+  </h2>
+  <p>
+    Special thanks to 
+    <a href="http://pages.cs.wisc.edu/~anhai" target="_blank">
+    <b>Prof. AnHai Doan</b></a>
+    and 
+    <a href="http://pages.cs.wisc.edu/~pradap" target="_blank">
+    <b>Pradap Konda</b></a>
+  </p>
+
+<!-- end of page -->
+ </font>
+ </body>
+</html>
+
